@@ -1,0 +1,33 @@
+{
+  "system_instruction_file": "prompts/system_instruction.txt",
+  "output_schema": {
+    "prediction": "integer 0 or 1",
+    "confidence": "float 0.0 to 1.0, converted to 0-100 for analysis",
+    "explanation": "brief free-text rationale",
+    "decision": "predict or defer"
+  },
+  "canonical": {
+    "template": "age: [age]; plasma_CA19_9: [plasma_CA19_9]; creatinine: [creatinine]; LYVE1: [LYVE1]; REG1B: [REG1B]; TFF1: [TFF1]; REG1A: [REG1A]",
+    "source": "utils.perturbations.canonical_prompt"
+  },
+  "retrieval_context": {
+    "template": "Here are similar patient cases for reference:\\n\\nCase 1: [features] -> Outcome: [label]\\n...\\nNow predict for the following patient:\\n\\n[target patient prompt]",
+    "source": "utils.retrieval.format_neighbours_as_context"
+  },
+  "families": {
+    "A_order": "Randomly permuted canonical feature-value pairs.",
+    "B_instruction": "Instruction paraphrase prepended to the unchanged patient record.",
+    "C_json": "Patient record rendered as a JSON object.",
+    "C_csv": "Patient record rendered as a CSV header and row.",
+    "C_markdown": "Patient record rendered as a markdown table.",
+    "C_prose": "Patient record rendered as prose.",
+    "D_numeric_precision": "Feature values rendered with varied numeric precision.",
+    "E_delimiters": "Feature-value pairs joined with alternate delimiters.",
+    "F_retrieval": "Retrieved context depth/diversity is varied while target facts stay fixed.",
+    "Composite": "Instruction, order, and delimiter perturbations applied together.",
+    "G_feature_mask": "One or two features are removed.",
+    "H_controlled_rounding": "All numeric values are rounded aggressively.",
+    "I_noise": "Bounded numeric noise is added to values.",
+    "J_missingness": "One or two feature values are replaced by missing-value tokens."
+  }
+}

@@ -1,0 +1,114 @@
+[
+  {
+    "family": "A_order",
+    "category": "information_preserving",
+    "function": "perturb_feature_order",
+    "description": "Shuffle the order of feature-value pairs.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": true
+  },
+  {
+    "family": "B_instruction",
+    "category": "information_preserving",
+    "function": "perturb_instruction",
+    "description": "Prepend a semantically similar clinical instruction template.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": true
+  },
+  {
+    "family": "C_json",
+    "category": "information_preserving",
+    "function": "perturb_json_format",
+    "description": "Render the patient record as a JSON object.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": true
+  },
+  {
+    "family": "C_csv",
+    "category": "information_preserving",
+    "function": "perturb_csv_format",
+    "description": "Render the patient record as a CSV header and row.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "C_markdown",
+    "category": "information_preserving",
+    "function": "perturb_markdown_table",
+    "description": "Render the patient record as a markdown table.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "C_prose",
+    "category": "information_preserving",
+    "function": "perturb_prose",
+    "description": "Render the patient record as natural-language prose.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "D_numeric_precision",
+    "category": "information_preserving_or_near_equivalent",
+    "function": "perturb_numeric_precision",
+    "description": "Display numeric values with alternate precision.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": true
+  },
+  {
+    "family": "E_delimiters",
+    "category": "information_preserving",
+    "function": "perturb_delimiters",
+    "description": "Change delimiters between feature-value pairs.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "F_retrieval",
+    "category": "information_preserving",
+    "function": "perturb_retrieval",
+    "description": "Vary retrieved support cases by context depth and diversity.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "Composite",
+    "category": "information_preserving_stress",
+    "function": "perturb_composite",
+    "description": "Combine order, delimiter, and instruction-template changes.",
+    "facts_preserved": true,
+    "reported_in_saved_main_results": true
+  },
+  {
+    "family": "G_feature_mask",
+    "category": "information_altering",
+    "function": "perturb_feature_mask",
+    "description": "Drop one or two patient features.",
+    "facts_preserved": false,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "H_controlled_rounding",
+    "category": "information_altering",
+    "function": "perturb_controlled_rounding",
+    "description": "Aggressively round all numeric values to zero or one decimal places.",
+    "facts_preserved": false,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "I_noise",
+    "category": "information_altering",
+    "function": "perturb_numeric_noise",
+    "description": "Apply bounded numeric noise to all values.",
+    "facts_preserved": false,
+    "reported_in_saved_main_results": false
+  },
+  {
+    "family": "J_missingness",
+    "category": "information_altering",
+    "function": "perturb_missingness",
+    "description": "Replace one or two feature values with missing-value placeholders.",
+    "facts_preserved": false,
+    "reported_in_saved_main_results": false
+  }
+]

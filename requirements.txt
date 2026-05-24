@@ -1,0 +1,25 @@
+# Core dependencies
+pandas>=1.3.0
+numpy>=1.21.0
+python-dotenv>=0.19.0
+
+# Visualization & Analysis
+matplotlib>=3.5.0
+seaborn>=0.12.0
+
+# Semantic drift metric (explanation embedding distance)
+sentence-transformers>=2.2.0
+
+# Distance calculations for retrieval perturbations
+scikit-learn>=1.0.0
+
+# Choose one or more of these based on your LLM provider:
+
+# Azure OpenAI
+openai>=1.3.0
+
+# Anthropic Claude
+anthropic>=0.7.0
+
+# Google Gemini
+google-genai>=0.1.0
