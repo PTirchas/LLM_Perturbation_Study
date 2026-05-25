@@ -76,7 +76,7 @@ def load_config() -> Config:
         random_seed=int(os.getenv("RANDOM_SEED", "0")),
         max_retries=int(os.getenv("MAX_RETRIES", "3")),
         retry_delay=float(os.getenv("RETRY_DELAY", "1.0")),
-        temperature=float(os.getenv("LLM_TEMPERATURE", "0.7")),
+        temperature=float(os.getenv("LLM_TEMPERATURE", "0.0")),
         azure_api_version=os.getenv("AZURE_API_VERSION", "2024-02-15-preview"),
         use_retrieval=os.getenv("USE_RETRIEVAL", "false").lower() in ("true", "1", "yes"),
         context_data_path=os.getenv("CONTEXT_DATA_PATH", "data/context_ready.csv"),
